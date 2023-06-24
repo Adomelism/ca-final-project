@@ -4,35 +4,35 @@
       "id": 1,
       "name": "J K Rowling",
       "nationality": "British",
-      "netWorth": "1042 million USD",
+      "netWorth": 1042000000,
       "born": 1965
     },
     {
       "id": 2,
       "name": "J R R Tolkien",
       "nationality": "South African",
-      "netWorth": "50 million USD",
+      "netWorth": 50000000,
       "born": 1892
     },
     {
       "id": 3,
       "name": "Dan Brown",
       "nationality": "American",
-      "netWorth": "160 million USD",
+      "netWorth": 160000000,
       "born": 1964
     },
     {
       "id": 4,
       "name": "Charles Dickens",
       "nationality": "British",
-      "netWorth": "13 million USD",
+      "netWorth": 13000000,
       "born": 1812
     },
     {
       "id": 5,
       "name": "Paulo Coelho",
       "nationality": "Portuguese",
-      "netWorth": "500 million USD",
+      "netWorth": 500000000,
       "born": 1947
     } 
   ],
@@ -41,31 +41,31 @@
       "authorId": 1,
       "id": 1,
       "title": "Harry Potter and the Philosopher's Stone",
-      "soldCopies": "120 million"
+      "soldCopies": 120000000
     },
     {
       "authorId": 2,
       "id": 2,
       "title": "The Hobbit",
-      "soldCopies": "100 million"
+      "soldCopies": 100000000
     },
     {
       "authorId": 3,
       "id": 3,
       "title": "The Da Vinci Code",
-      "soldCopies": "80 million"
+      "soldCopies": 80000000
     },
     {
       "authorId": 4,
       "id": 4,
       "title": "A Tale of Two Cities",
-      "soldCopies": "200 million"
+      "soldCopies": 200000000
     },
     {
       "authorId": 5,
       "id": 5,
       "title": "The Alchemist",
-      "soldCopies": "65 million"
+      "soldCopies": 65000000
     }
   ],
   "categories": [
@@ -99,26 +99,31 @@
     {
       "bookId": 1,
       "id": 1,
+      "title": "Harry Potter and the Philosopher's Stone book cover",
       "url": "https://m.media-amazon.com/images/I/71-++hbbERL.jpg"
     },
     {
       "bookId": 2,
       "id": 2,
+      "title": "The Hobbit book cover",
       "url": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "bookId": 3,
       "id": 3,
+      "title": "The Da Vinci Code book cover",
       "url": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "bookId": 4,
       "id": 4,
+      "title": "A Tale of Two Cities book cover",
       "url": "https://m.media-amazon.com/images/I/91C0MECqJ+L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "bookId": 5,
       "id": 5,
+      "title": "The Alchemist book cover",
       "url": "https://m.media-amazon.com/images/I/41ybG235TcL._AC_UF1000,1000_QL80_.jpg"
     }  
   ],

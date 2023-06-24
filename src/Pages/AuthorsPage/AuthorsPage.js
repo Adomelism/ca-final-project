@@ -22,7 +22,7 @@ const AuthorsPage = () => {
         <ul>
             {authors.map(author => (
                 <li key={author.id}>
-                 <Link to ={`/author/${author.id}`}>{author.name}</Link> {author.nationality} citizen, born in {author.born} with estimated net worth of {author.netWorth}.
+                 <Link to ={`/authors/${author.id}`}>{author.name}</Link> 
                 </li>))} 
         </ul>
     </Container>

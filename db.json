@@ -39,30 +39,35 @@
   "books": [
     {
       "authorId": 1,
+      "categoryId": 1,
       "id": 1,
       "title": "Harry Potter and the Philosopher's Stone",
       "soldCopies": 120000000
     },
     {
       "authorId": 2,
+      "categoryId": 1,
       "id": 2,
       "title": "The Hobbit",
       "soldCopies": 100000000
     },
     {
       "authorId": 3,
+      "categoryId": 2,
       "id": 3,
       "title": "The Da Vinci Code",
       "soldCopies": 80000000
     },
     {
       "authorId": 4,
+      "categoryId": 3,
       "id": 4,
       "title": "A Tale of Two Cities",
       "soldCopies": 200000000
     },
     {
       "authorId": 5,
+      "categoryId": 1,
       "id": 5,
       "title": "The Alchemist",
       "soldCopies": 65000000
@@ -70,30 +75,17 @@
   ],
   "categories": [
     {
-      "bookId": 1,
       "id": 1,
       "genre": "fantasy"
     },
     {
-      "bookId": 2,
       "id": 2,
-      "genre": "fantasy"
-    },
-    {
-      "bookId": 3,
-      "id": 3,
       "genre": "mystery thriller"
     },
     {
-      "bookId": 4,
-      "id": 4,
+      "id": 3,
       "genre": "historical fiction"
-    },
-    {
-      "bookId": 5,
-      "id": 5,
-      "genre": "fantasy"
-    }  
+    }
   ],
   "covers": [
     {

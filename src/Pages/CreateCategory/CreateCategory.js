@@ -48,7 +48,7 @@ const CreateCategory = () => {
         </div>
 
 
-    <button type="submit">Submit Review</button>
+    <button type="submit">Submit Genre</button>
 
 
       </form>

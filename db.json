@@ -85,6 +85,10 @@
     {
       "id": 3,
       "genre": "historical fiction"
+    },
+    {
+      "genre": "edit",
+      "id": 4
     }
   ],
   "reviews": [

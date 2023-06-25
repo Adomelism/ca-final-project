@@ -16,6 +16,7 @@ import CreateCover from './Pages/CreateCover/CreateCover';
 import ReviewsPage from './Pages/ReviewsPage/ReviewsPage';
 import ReviewPage from './Pages/ReviewPage/ReviewPage';
 import CreateReview from './Pages/CreateReview/CreateReview';
+import EditReview from './Pages/EditReview/EditReview';
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
             <Route path='/ReviewsPage' element={<ReviewsPage />} />
             <Route path='/reviews/:id' element={<ReviewPage />} />
             <Route path='/reviews/create' element={<CreateReview />} />
+            <Route path='/reviews/edit/:id' element={<EditReview />} />
 
             <Route path='/CoversPage' element={<CoversPage />} />
             <Route path='/covers/:id' element={<CoverPage />} />

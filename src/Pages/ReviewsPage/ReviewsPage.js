@@ -29,12 +29,6 @@ const ReviewsPage = () => {
         console.log('delete' + id)
     }
 
-    const editReviewHandler = (id) => {
-        const editReviewIndex = reviews.find(review => review.id === id)
-        console.log(editReviewIndex)
-        editReview(editReviewIndex)
-
-    }
 
   return (
     <Container>
@@ -45,7 +39,7 @@ const ReviewsPage = () => {
         <li key={review.id}>
           <Link to={`/reviews/${review.id}`}>{review.comment}</Link>
           <button onClick={() => deleteReviewHandler(review.id)}>Delete</button>
-          <button onClick={() => editReviewHandler(review.id)}>Edit</button>
+          <Link to={`/reviews/edit/${review.id}`}>Edit Review</Link>
         </li>
     ))}
     </ul>

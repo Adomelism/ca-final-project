@@ -67,7 +67,6 @@ const CreateBook = () => {
     .catch(err => toast.error(err.message))
   }
   
-console.log(authors)
   return (
     <Container>
     <form onSubmit={createBookHandler}>

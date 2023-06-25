@@ -2,7 +2,7 @@ import Container from '../Components/Container/Container';
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { API_URL } from '../../config';
-import axios from 'axios';
+// import axios from 'axios';
 
 const CategoryPage = () => {
 
@@ -11,24 +11,26 @@ const CategoryPage = () => {
   const [category, setCategory] = useState(null)
 
   useEffect(() => {
-    fetch(`${API_URL}/books?_expand=category`)
+    fetch(`${API_URL}/categories/${id}?_embed=books`)
     .then(res => res.json())
     .then(data => {
       setCategory(data)
     })
   }, [id])
 
-  if (!category) {
-    return '';
-  }
-
-// console.log(category.category.genre)
-// console.log(category.title)
-// axios.get(`${API_URL}/books?_expand=category`)
+  console.log(category)
 
   return (
     <Container>
 
+      {category && category.books ? (
+         <ul>
+
+         {category.books.map(item => <li key={item.id}>{item.title}</li>)}
+   
+         </ul>
+      ) : ''}
+     
     
     </Container>
   )

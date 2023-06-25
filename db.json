@@ -87,6 +87,33 @@
       "genre": "historical fiction"
     }
   ],
+  "reviews": [
+    {
+      "bookId": 1,
+      "id": 1,
+      "comment": "It is a wonderful introduction to a vast and detailed magical world, providing fantasy readers with escapism and a life they would have loved to have lived as a child"
+    },
+    {
+      "bookId": 2,
+      "id": 2,
+      "comment": "Journey through Middle-earth is one of the most unforgettable adventures that has ever taken place in a book.s"
+    },
+    {
+      "bookId": 3,
+      "id": 3,
+      "comment": "Filled with quick adventure scenes and wrapped in magnificent story telling."
+    },
+    {
+      "bookId": 4,
+      "id": 4,
+      "comment": "Book that deals with the major themes of duality, revolution, and resurrection."
+    },
+    {
+      "bookId": 5,
+      "id": 5,
+      "comment": "Story of a young man who beat fear to follow his Personal Legend and how you can do the same thing too."
+    }  
+  ],
   "covers": [
     {
       "bookId": 1,

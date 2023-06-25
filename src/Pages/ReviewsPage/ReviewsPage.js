@@ -3,10 +3,13 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../config';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ReviewsPage = () => {
     
     const [reviews, setReviews] = useState([])
+    // const [review, setReview] = useState([]) galimai reikia dar vieno state istrynus review atnaujint state
 
     useEffect(() => {
         axios.get(`${API_URL}/reviews`)
@@ -14,7 +17,21 @@ const ReviewsPage = () => {
         .catch(err => console.log(err.message))
     }, [])
 
-    console.log(reviews)
+    const deleteReviewHandler = (id) => {
+        axios.delete(`${API_URL}/reviews/${id}`)
+        .then(res => {
+            const removeReviewIndex = reviews.findIndex(review => review.id === id);
+            setReviews(prevState => prevState.toSpliced(removeReviewIndex, 1))
+            toast.success('Review was deleted.')
+        })
+        .catch(err => toast.error(err.message))
+        console.log('delete' + id)
+    }
+
+    const editReviewHandler = (id) => {
+        console.log('edit' + id)
+
+    }
 
   return (
     <Container>
@@ -24,6 +41,8 @@ const ReviewsPage = () => {
       {reviews.map(review => (
         <li key={review.id}>
           <Link to={`/reviews/${review.id}`}>{review.comment}</Link>
+          <button onClick={() => deleteReviewHandler(review.id)}>Delete</button>
+          <button onClick={() => editReviewHandler(review.id)}>Edit</button>
         </li>
     ))}
     </ul>

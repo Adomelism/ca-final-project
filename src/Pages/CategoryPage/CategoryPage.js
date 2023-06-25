@@ -18,8 +18,6 @@ const CategoryPage = () => {
     })
   }, [id])
 
-  console.log(category)
-
   return (
     <Container>
 

@@ -1,5 +1,6 @@
 import './App.css';
 import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import AuthorsPage from './Pages/AuthorsPage/AuthorsPage';
 import AuthorPage from './Pages/AuthorPage/AuthorPage';
 import CreateAuthor from './Pages/CreateAuthor/CreateAuthor';
@@ -83,6 +84,19 @@ function App() {
               </div>
               } />
         </Routes>
+
+        <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="light"
+      />
 
     </div>
   );

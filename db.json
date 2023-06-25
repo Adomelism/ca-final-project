@@ -117,21 +117,6 @@
       "comment": "aaaaa",
       "bookId": 1,
       "id": 7
-    },
-    {
-      "comment": "zzzz",
-      "bookId": 1,
-      "id": 9
-    },
-    {
-      "comment": "yyyyyy",
-      "bookId": 1,
-      "id": 10
-    },
-    {
-      "comment": "mmmmm",
-      "bookId": 2,
-      "id": 11
     }
   ],
   "covers": [

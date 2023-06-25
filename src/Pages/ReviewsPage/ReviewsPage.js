@@ -10,6 +10,7 @@ const ReviewsPage = () => {
     
     const [reviews, setReviews] = useState([])
     // const [review, setReview] = useState([]) galimai reikia dar vieno state istrynus review atnaujint state
+    const [editReview, setEditReview] = useState(null)
 
     useEffect(() => {
         axios.get(`${API_URL}/reviews`)
@@ -29,7 +30,9 @@ const ReviewsPage = () => {
     }
 
     const editReviewHandler = (id) => {
-        console.log('edit' + id)
+        const editReviewIndex = reviews.find(review => review.id === id)
+        console.log(editReviewIndex)
+        editReview(editReviewIndex)
 
     }
 

@@ -4,6 +4,7 @@ import { API_URL } from '../../config';
 import Container from '../Components/Container/Container';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const CreateReview = () => {
 
@@ -22,6 +23,8 @@ const CreateReview = () => {
 const bookHandler = (event) => setBook(event.target.value);
 const reviewHandler = (event) => setReview(event.target.value);
 
+const navigator = useNavigate();
+
 const createReviewHandler = (event) => {
   event.preventDefault();
   console.log(review)
@@ -31,7 +34,10 @@ const createReviewHandler = (event) => {
     bookId: Number(book),
   }
   axios.post(`${API_URL}/reviews`, newReview)
-  .then(res => toast.success('Review was added to the selected book.'))
+  .then(res => {
+    toast.success('Review was added to the selected book.')
+    navigator(`/reviewsPage`);
+  })
   .catch(err => toast.error(err.message))
 }
 

@@ -77,6 +77,14 @@
       "title": "The Alchemist",
       "url": "https://m.media-amazon.com/images/I/41ybG235TcL._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 65000000
+    },
+    {
+      "authorId": 1,
+      "categoryId": 1,
+      "title": "test",
+      "url": "https://media.wired.com/photos/5fb70f2ce7b75db783b7012c/master/w_2560%2Cc_limit/Gear-Photos-597589287.jpg",
+      "soldCopies": "1",
+      "id": 6
     }
   ],
   "categories": [

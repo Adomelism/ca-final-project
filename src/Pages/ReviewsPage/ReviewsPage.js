@@ -9,8 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const ReviewsPage = () => {
     
     const [reviews, setReviews] = useState([])
-    // const [review, setReview] = useState([]) galimai reikia dar vieno state istrynus review atnaujint state
-    const [editReview, setEditReview] = useState(null)
 
     useEffect(() => {
         axios.get(`${API_URL}/reviews`)

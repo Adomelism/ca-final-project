@@ -9,7 +9,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 const EditBook = () => {
 
     const { id } = useParams()
-    console.log(id)
 
     const [authors, setAuthors] = useState([])
     const [categories, setCategories] = useState([])
@@ -46,6 +45,7 @@ const EditBook = () => {
     useEffect(() => {
       axios.get(`${API_URL}/categories`)
       .then(res => {
+        console.log(res.data)
         setCategories(res.data)
       })
     }, [])
@@ -82,8 +82,8 @@ const EditBook = () => {
           soldCopies: Number(soldCopies)
       })
        .then(res => {
-          toast.success('Selected genre was edited.')
-          navigator(`/CategoriesPage`)
+          toast.success('Selected book was edited.')
+          navigator(`/BooksPage`)
       })
       .catch(err => toast.error(err.message))
     }

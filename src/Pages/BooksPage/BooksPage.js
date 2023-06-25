@@ -22,7 +22,7 @@ const deleteBookHandler = (id) => {
         .then(res => {
             const removeBookIndex = books.findIndex(book => book.id === id);
             setBooks(prevState => prevState.toSpliced(removeBookIndex, 1))
-            toast.success('Book genre was deleted.')
+            toast.success('Selected book was deleted.')
         })
         .catch(err => toast.error(err.message))
 }

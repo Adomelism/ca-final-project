@@ -12,8 +12,6 @@ import CategoryPage from './Pages/CategoryPage/CategoryPage';
 import CreateCategory from './Pages/CreateCategory/CreateCategory';
 import EditCategory from './Pages/EditCategory/EditCategory';
 import CoversPage from './Pages/CoversPage/CoversPage';
-import CoverPage from './Pages/CoverPage/CoverPage';
-import CreateCover from './Pages/CreateCover/CreateCover';
 import ReviewsPage from './Pages/ReviewsPage/ReviewsPage';
 import ReviewPage from './Pages/ReviewPage/ReviewPage';
 import CreateReview from './Pages/CreateReview/CreateReview';
@@ -72,8 +70,7 @@ function App() {
             <Route path='/reviews/edit/:id' element={<EditReview />} />
 
             <Route path='/CoversPage' element={<CoversPage />} />
-            <Route path='/covers/:id' element={<CoverPage />} />
-            <Route path='/covers/create' element={<CreateCover />} />
+
         
 
             <Route path='/' element={ 

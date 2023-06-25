@@ -42,6 +42,7 @@
       "categoryId": 1,
       "id": 1,
       "title": "Harry Potter and the Philosopher's Stone",
+      "url": "https://m.media-amazon.com/images/I/71-++hbbERL.jpg",
       "soldCopies": 120000000
     },
     {
@@ -49,6 +50,7 @@
       "categoryId": 1,
       "id": 2,
       "title": "The Hobbit",
+      "url": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 100000000
     },
     {
@@ -56,6 +58,7 @@
       "categoryId": 2,
       "id": 3,
       "title": "The Da Vinci Code",
+      "url": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 80000000
     },
     {
@@ -63,6 +66,7 @@
       "categoryId": 3,
       "id": 4,
       "title": "A Tale of Two Cities",
+      "url": "https://m.media-amazon.com/images/I/91C0MECqJ+L._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 200000000
     },
     {
@@ -70,6 +74,7 @@
       "categoryId": 1,
       "id": 5,
       "title": "The Alchemist",
+      "url": "https://m.media-amazon.com/images/I/41ybG235TcL._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 65000000
     }
   ],
@@ -116,38 +121,6 @@
       "comment": "pakeista i trecia",
       "id": 8,
       "bookId": 3
-    }
-  ],
-  "covers": [
-    {
-      "bookId": 1,
-      "id": 1,
-      "title": "Harry Potter and the Philosopher's Stone book cover",
-      "url": "https://m.media-amazon.com/images/I/71-++hbbERL.jpg"
-    },
-    {
-      "bookId": 2,
-      "id": 2,
-      "title": "The Hobbit book cover",
-      "url": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg"
-    },
-    {
-      "bookId": 3,
-      "id": 3,
-      "title": "The Da Vinci Code book cover",
-      "url": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg"
-    },
-    {
-      "bookId": 4,
-      "id": 4,
-      "title": "A Tale of Two Cities book cover",
-      "url": "https://m.media-amazon.com/images/I/91C0MECqJ+L._AC_UF1000,1000_QL80_.jpg"
-    },
-    {
-      "bookId": 5,
-      "id": 5,
-      "title": "The Alchemist book cover",
-      "url": "https://m.media-amazon.com/images/I/41ybG235TcL._AC_UF1000,1000_QL80_.jpg"
     }
   ],
   "profile": {

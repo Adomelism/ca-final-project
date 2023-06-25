@@ -3,37 +3,38 @@
     {
       "id": 1,
       "name": "J K Rowling",
-      "nationality": "British",
-      "netWorth": 1042000000,
-      "born": 1965
+      "about": "Joanne Rowling (born 31 July 1965), best known by her pen name J. K. Rowling, is a British author and philanthropist. She wrote Harry Potter, a seven-volume children's fantasy series published from 1997 to 2007. The series has sold over 600 million copies, been translated into 84 languages, and spawned a global media franchise including films and video games.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/220px-J._K._Rowling_2010.jpg"
     },
     {
       "id": 2,
       "name": "J R R Tolkien",
-      "nationality": "South African",
-      "netWorth": 50000000,
-      "born": 1892
+      "about": "John Ronald Reuel Tolkien (3 January 1892 to 2 September 1973) was an English writer and philologist. He was the author of the high fantasy works The Hobbit and The Lord of the Rings. ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/J._R._R._Tolkien%2C_ca._1925.jpg/220px-J._R._R._Tolkien%2C_ca._1925.jpg"
     },
     {
       "id": 3,
       "name": "Dan Brown",
-      "nationality": "American",
-      "netWorth": 160000000,
-      "born": 1964
+      "about": "Daniel Gerhard Brown (born June 22, 1964) is an American author best known for his thriller novels, including the Robert Langdon novels Angels & Demons (2000), The Da Vinci Code (2003), The Lost Symbol (2009), Inferno (2013), and Origin (2017). His novels are treasure hunts that usually take place over a period of 24 hours. They feature recurring themes of cryptography, art, and conspiracy theories. His books have been translated into 57 languages and, as of 2012, have sold over 200 million copies.`",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Dan_Brown_bookjacket_cropped.jpg/220px-Dan_Brown_bookjacket_cropped.jpg"
     },
     {
       "id": 4,
       "name": "Charles Dickens",
-      "nationality": "British",
-      "netWorth": 13000000,
-      "born": 1812
+      "about": "Charles John Huffam Dickens (7 February 1812 to 9 June 1870) was an English writer and social critic who created some of the world's best-known fictional characters and is regarded by many as the greatest novelist of the Victorian era. His works enjoyed unprecedented popularity during his lifetime and, by the 20th century, critics and scholars had recognised him as a literary genius. His novels and short stories are widely read today.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dickens_Gurney_head.jpg/220px-Dickens_Gurney_head.jpg"
     },
     {
       "id": 5,
       "name": "Paulo Coelho",
-      "nationality": "Portuguese",
-      "netWorth": 500000000,
-      "born": 1947
+      "about": "Paulo Coelho de Souza (Portuguese, born 24 August 1947) is a Brazilian lyricist and novelist and a member of the Brazilian Academy of Letters since 2002. His novel The Alchemist became an international best-seller and he has published 30 more books since then.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paulo_Coelho_2007-04-09_001_%28cropped%29.jpg/220px-Paulo_Coelho_2007-04-09_001_%28cropped%29.jpg"
+    },
+    {
+      "name": "test2",
+      "about": "test2",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/220px-J._K._Rowling_2010.jpg",
+      "id": 6
     }
   ],
   "books": [
@@ -42,6 +43,7 @@
       "categoryId": 1,
       "id": 1,
       "title": "Harry Potter and the Philosopher's Stone",
+      "url": "https://m.media-amazon.com/images/I/71-++hbbERL.jpg",
       "soldCopies": 120000000
     },
     {
@@ -49,6 +51,7 @@
       "categoryId": 1,
       "id": 2,
       "title": "The Hobbit",
+      "url": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 100000000
     },
     {
@@ -56,6 +59,7 @@
       "categoryId": 2,
       "id": 3,
       "title": "The Da Vinci Code",
+      "url": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 80000000
     },
     {
@@ -63,6 +67,7 @@
       "categoryId": 3,
       "id": 4,
       "title": "A Tale of Two Cities",
+      "url": "https://m.media-amazon.com/images/I/91C0MECqJ+L._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 200000000
     },
     {
@@ -70,7 +75,16 @@
       "categoryId": 1,
       "id": 5,
       "title": "The Alchemist",
+      "url": "https://m.media-amazon.com/images/I/41ybG235TcL._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 65000000
+    },
+    {
+      "authorId": 1,
+      "categoryId": 1,
+      "title": "test",
+      "url": "https://media.wired.com/photos/5fb70f2ce7b75db783b7012c/master/w_2560%2Cc_limit/Gear-Photos-597589287.jpg",
+      "soldCopies": "1",
+      "id": 6
     }
   ],
   "categories": [
@@ -85,14 +99,13 @@
     {
       "id": 3,
       "genre": "historical fiction"
+    },
+    {
+      "genre": "edit",
+      "id": 4
     }
   ],
   "reviews": [
-    {
-      "bookId": 1,
-      "id": 1,
-      "comment": "It is a wonderful introduction to a vast and detailed magical world, providing fantasy readers with escapism and a life they would have loved to have lived as a child"
-    },
     {
       "bookId": 2,
       "id": 2,
@@ -114,41 +127,9 @@
       "comment": "Story of a young man who beat fear to follow his Personal Legend and how you can do the same thing too."
     },
     {
-      "comment": "aaaaa",
-      "bookId": 1,
-      "id": 7
-    }
-  ],
-  "covers": [
-    {
-      "bookId": 1,
-      "id": 1,
-      "title": "Harry Potter and the Philosopher's Stone book cover",
-      "url": "https://m.media-amazon.com/images/I/71-++hbbERL.jpg"
-    },
-    {
-      "bookId": 2,
-      "id": 2,
-      "title": "The Hobbit book cover",
-      "url": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg"
-    },
-    {
-      "bookId": 3,
-      "id": 3,
-      "title": "The Da Vinci Code book cover",
-      "url": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg"
-    },
-    {
-      "bookId": 4,
-      "id": 4,
-      "title": "A Tale of Two Cities book cover",
-      "url": "https://m.media-amazon.com/images/I/91C0MECqJ+L._AC_UF1000,1000_QL80_.jpg"
-    },
-    {
-      "bookId": 5,
-      "id": 5,
-      "title": "The Alchemist book cover",
-      "url": "https://m.media-amazon.com/images/I/41ybG235TcL._AC_UF1000,1000_QL80_.jpg"
+      "comment": "pakeista i trecia",
+      "id": 8,
+      "bookId": 3
     }
   ],
   "profile": {

@@ -38,13 +38,21 @@ const navigator = useNavigate();
 const editReviewHandler = (event) => {
     event.preventDefault();  
     
-    const comment = {
+    // const comment = {
+    //     comment: review,
+    //     id,
+    //     bookId: Number(book)
+    // }
+    // axios.put(`${API_URL}/reviews/${id}`, comment) 
+    // .then(res => navigator(`/reviewsPage`))
+    // .catch(err => toast.error(err.message))
+
+    axios.put(`${API_URL}/reviews/${id}`, {
         comment: review,
         id,
         bookId: Number(book)
-    }
-    axios.put(`${API_URL}/reviews/${id}`, comment) 
-    .then(res => navigator(`/reviewsPage`))
+    })
+     .then(res => navigator(`/reviewsPage`))
     .catch(err => toast.error(err.message))
     
 

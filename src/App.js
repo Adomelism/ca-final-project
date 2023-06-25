@@ -8,6 +8,7 @@ import EditAuthor from './Pages/EditAuthor/EditAuthor';
 import BooksPage from './Pages/BooksPage/BooksPage';
 import BookPage from './Pages/BookPage/BookPage';
 import CreateBook from './Pages/CreateBook/CreateBook';
+import EditBook from './Pages/EditBook/EditBook';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import CategoryPage from './Pages/CategoryPage/CategoryPage';
 import CreateCategory from './Pages/CreateCategory/CreateCategory';
@@ -59,6 +60,7 @@ function App() {
             <Route path='/BooksPage' element={<BooksPage />} />
             <Route path='/books/:id' element={<BookPage />} />
             <Route path='/books/create' element={<CreateBook />} />
+            <Route path='/books/edit/:ID' element={<EditBook />} />
 
             <Route path='/CategoriesPage' element={<CategoriesPage />} />
             <Route path='/categories/:id' element={<CategoryPage />} />

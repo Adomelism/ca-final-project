@@ -9,6 +9,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 const EditBook = () => {
 
     const { id } = useParams()
+    // const { bId, cId } = useParams()
 
     const [authors, setAuthors] = useState([])
     const [categories, setCategories] = useState([])
@@ -47,6 +48,7 @@ const EditBook = () => {
       .then(res => {
         console.log(res.data)
         setCategories(res.data)
+        
       })
     }, [])
 

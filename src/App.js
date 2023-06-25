@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import AuthorsPage from './Pages/AuthorsPage/AuthorsPage';
 import AuthorPage from './Pages/AuthorPage/AuthorPage';
 import CreateAuthor from './Pages/CreateAuthor/CreateAuthor';
+import EditAuthor from './Pages/EditAuthor/EditAuthor';
 import BooksPage from './Pages/BooksPage/BooksPage';
 import BookPage from './Pages/BookPage/BookPage';
 import CreateBook from './Pages/CreateBook/CreateBook';
@@ -53,6 +54,7 @@ function App() {
             <Route path='/AuthorsPage' element={<AuthorsPage />} />
             <Route path='/authors/:id' element={<AuthorPage />} />
             <Route path='/authors/create' element={<CreateAuthor />} />
+            <Route path='/authors/edit/:id' element={<EditAuthor />} />
 
             <Route path='/BooksPage' element={<BooksPage />} />
             <Route path='/books/:id' element={<BookPage />} />

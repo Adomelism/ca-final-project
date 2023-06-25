@@ -14,7 +14,7 @@ const CategoriesPage = () => {
   useEffect(() => {
     axios.get(`${API_URL}/categories`)
     .then(res => setCategories(res.data))
-    .catch(err => console.log(err.message))
+    .catch(err => toast.error(err.message))
 }, [])
 
 const deleteCategoryHandler = (id) => {

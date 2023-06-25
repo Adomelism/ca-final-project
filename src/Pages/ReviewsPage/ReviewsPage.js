@@ -26,7 +26,6 @@ const ReviewsPage = () => {
             toast.success('Review was deleted.')
         })
         .catch(err => toast.error(err.message))
-        console.log('delete' + id)
     }
 
 

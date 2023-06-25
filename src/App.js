@@ -10,6 +10,7 @@ import CreateBook from './Pages/CreateBook/CreateBook';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import CategoryPage from './Pages/CategoryPage/CategoryPage';
 import CreateCategory from './Pages/CreateCategory/CreateCategory';
+import EditCategory from './Pages/EditCategory/EditCategory';
 import CoversPage from './Pages/CoversPage/CoversPage';
 import CoverPage from './Pages/CoverPage/CoverPage';
 import CreateCover from './Pages/CreateCover/CreateCover';
@@ -62,6 +63,8 @@ function App() {
             <Route path='/CategoriesPage' element={<CategoriesPage />} />
             <Route path='/categories/:id' element={<CategoryPage />} />
             <Route path='/categories/create' element={<CreateCategory />} />
+            <Route path='/categories/edit/:id' element={<EditCategory />} />
+
 
             <Route path='/ReviewsPage' element={<ReviewsPage />} />
             <Route path='/reviews/:id' element={<ReviewPage />} />

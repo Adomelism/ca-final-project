@@ -15,7 +15,7 @@ const AuthorPage = () => {
 
   useEffect(() => {
 
-  fetch(`${API_URL}/authors/${id}`)
+  fetch(`${API_URL}/authors/${id}?_embed=books`)
       .then(res => res.json())
       .then(data => {
         setAuthor(data)
@@ -36,7 +36,10 @@ const AuthorPage = () => {
     <Link to={`/AuthorsPage`}>Author was deleted. Go back to authors List.</Link> : (
       <div>
         <button onClick={deleteHandler}>Delete Author</button>
-        <h1>{author.nationality} citizen, born in {author.born} with estimated net worth of {author.netWorth}.</h1>
+        <h1>{author.name}</h1>
+        <img src={author.image} alt={author.name}></img>
+        <p>{author.about}</p>
+        <span>If you are fascinated by this author, check list of available <Link to={`/books/${author.id}`}>books!</Link></span>
       </div>
     );
 

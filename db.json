@@ -43,6 +43,7 @@
       "id": 1,
       "title": "Harry Potter and the Philosopher's Stone",
       "url": "https://m.media-amazon.com/images/I/71-++hbbERL.jpg",
+      "thumbnailUrl": "https://m.media-amazon.com/images/I/71-++hbbERL.jpg",
       "soldCopies": 120000000
     },
     {
@@ -51,6 +52,7 @@
       "id": 2,
       "title": "The Hobbit",
       "url": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg",
+      "thumbnailUrl": "https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 100000000
     },
     {
@@ -59,6 +61,7 @@
       "id": 3,
       "title": "The Da Vinci Code",
       "url": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg",
+      "thumbnailUrl": "https://m.media-amazon.com/images/I/91Q5dCjc2KL._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 80000000
     },
     {
@@ -67,6 +70,7 @@
       "id": 4,
       "title": "A Tale of Two Cities",
       "url": "https://m.media-amazon.com/images/I/91C0MECqJ+L._AC_UF1000,1000_QL80_.jpg",
+      "thumbnailUrl": "https://m.media-amazon.com/images/I/91C0MECqJ+L._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 200000000
     },
     {
@@ -75,6 +79,7 @@
       "id": 5,
       "title": "The Alchemist",
       "url": "https://m.media-amazon.com/images/I/41ybG235TcL._AC_UF1000,1000_QL80_.jpg",
+      "thumbnailUrl": "https://m.media-amazon.com/images/I/41ybG235TcL._AC_UF1000,1000_QL80_.jpg",
       "soldCopies": 65000000
     }
   ],

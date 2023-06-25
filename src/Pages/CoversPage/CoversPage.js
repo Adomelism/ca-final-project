@@ -1,9 +1,10 @@
+import React from 'react';
 import Container from '../Components/Container/Container';
 import { useState, useEffect } from 'react';
 import { API_URL } from '../../config';
 import axios from 'axios';
-import 'photoswipe/dist/photoswipe.css'
-import { Gallery, Item } from 'react-photoswipe-gallery'
+import 'photoswipe/dist/photoswipe.css';
+import { Gallery, Item } from 'react-photoswipe-gallery';
 import { v4 as uuid } from 'uuid';
 
 
@@ -15,12 +16,12 @@ const CoversPage = () => {
     <Item
     key={uuid()}
     original={cover.url}
-    thumbnail={cover.url}
+    thumbnail={cover.thumbnailUrl}
     width="600"
     height="600"
   >
     {({ ref, open }) => (
-      <img ref={ref} onClick={open} src={cover.url} alt={cover.title} />
+      <img ref={ref} onClick={open} src={cover.thumbnailUrl} alt={cover.title} />
     )}
   </Item>
   ))
@@ -35,13 +36,9 @@ const CoversPage = () => {
 
   return (
     <Container>
-
-
       <Gallery>
             {photoElement}
           </Gallery>
-
-  
     </Container>
   )
 }

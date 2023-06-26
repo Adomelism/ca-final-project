@@ -82,6 +82,27 @@
   }
 }
 
+.ul-element {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.li-element {
+  list-style-type: none;
+  border: 2px solid black;
+  padding: 15px;
+  box-shadow: 5px 5px 5px 2px green;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link-to-item {
+  margin-bottom: 50px;
+}
+
 
 .content {
     max-width: 1270px;

@@ -5,6 +5,8 @@ import { API_URL } from '../../config';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
 
 const ReviewsPage = () => {
     
@@ -26,6 +28,13 @@ const ReviewsPage = () => {
         .catch(err => toast.error(err.message))
     }
 
+    // .reviews-list {
+    //   list-style-type: none;
+    //   padding: 15px;
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   gap: 10px;
+    // }
 
   return (
     <Container>
@@ -33,10 +42,11 @@ const ReviewsPage = () => {
 
     <ul>
       {reviews.map(review => (
-        <li key={review.id}>
-          <Link to={`/reviews/${review.id}`}>{review.comment}</Link>
+        <li className='reviews-list' key={review.id}>
           <button className='button' onClick={() => deleteReviewHandler(review.id)}>Delete</button>
           <Link to={`/reviews/edit/${review.id}`} className='link-edit'>Edit Review</Link>
+          <Link to={`/reviews/${review.id}`}>
+          {review.comment} <FontAwesomeIcon icon={faComments} bounce/></Link>
         </li>
     ))}
     </ul>

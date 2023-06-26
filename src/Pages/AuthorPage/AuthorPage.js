@@ -29,6 +29,7 @@ const AuthorPage = () => {
 
       <Card 
       title={author.name}
+      author=''
       imageUrl={author.image}
       info={author.about}
       />

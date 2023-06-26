@@ -95,6 +95,26 @@
     {
       "genre": "edits",
       "id": 4
+    },
+    {
+      "genre": "Crime",
+      "id": 5
+    },
+    {
+      "genre": "Sci-Fi",
+      "id": 6
+    },
+    {
+      "genre": "test1",
+      "id": 7
+    },
+    {
+      "genre": "test2",
+      "id": 8
+    },
+    {
+      "genre": "test3",
+      "id": 9
     }
   ],
   "reviews": [

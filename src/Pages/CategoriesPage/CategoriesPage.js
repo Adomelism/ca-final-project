@@ -30,16 +30,17 @@ const deleteCategoryHandler = (id) => {
   return (
     <Container>
       <Link to='/categories/create' className='link-add'>Add a new book Genre!</Link>
-
-      <ul>Genres: 
-        {categories.map(category => (
-          <li key={category.id}>
-            <Link to={`/categories/${category.id}`}>{category.genre}</Link>
-            <button className='button' onClick={() => deleteCategoryHandler(category.id)}>Delete</button>
-          <Link to={`/categories/edit/${category.id}`} className='link-edit'>Edit Category</Link>
-          </li>
-      ))}
-      </ul>
+      <div className='sticky-wrapper'>
+        <ul className='sticky-ul'>
+          {categories.map(category => (
+            <li className='sticky-li' key={category.id}>
+              <Link className='sticky-link' to={`/categories/${category.id}`}>{category.genre}</Link>
+              <button className='button' onClick={() => deleteCategoryHandler(category.id)}>Delete</button>
+            <Link to={`/categories/edit/${category.id}`} className='link-edit'>Edit Category</Link>
+            </li>
+        ))}
+        </ul>
+      </div>
     </Container>
   )
 }

@@ -103,6 +103,107 @@
   margin-bottom: 50px;
 }
 
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.inputBox {
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 30px;
+}
+
+.inputBox textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 30px;
+}
+
+.inputBox span {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: green;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+  color: green;
+  transform: translateX(10px) translateY(-45px);
+  font-size: 0.65em;
+  padding: 0 10px;
+}
+
+.inputBox textarea:valid ~ span,
+.inputBox textarea:focus ~ span
+{
+  color: green;
+  transform: translateX(10px) translateY(-60px);
+  font-size: 0.65em;
+  padding: 0 10px;
+
+}
+
+.link-add-margin {
+  color: white;
+  background: green;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+  border: 2px solid green;
+  border-radius: 50px;
+  transition: all 0.2s;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: 70px;
+
+  &:hover {
+    border-color: green;
+    background-color: white;
+    border-radius: 50px;
+    color: green;
+  }
+}
+
+.link-edit-margin {
+  color: white;
+  background: orange;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+  border: 2px solid orange;
+  border-radius: 50px;
+  transition: all 0.2s;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: 70px;
+
+  &:hover {
+    border-color: orange;
+    background-color: white;
+    border-radius: 50px;
+    color: orange;
+  }
+}
+
+
 
 .content {
     max-width: 1270px;

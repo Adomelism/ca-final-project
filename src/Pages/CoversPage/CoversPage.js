@@ -35,7 +35,7 @@ const images = [
   <Container>
     
     <div className='App'>
-      <ImageGallery items={images} />;
+      <ImageGallery items={images} />
     </div>
 
   </Container>

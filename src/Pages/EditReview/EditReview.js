@@ -2,7 +2,7 @@ import Container from '../Components/Container/Container';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../config';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
@@ -38,15 +38,6 @@ const navigator = useNavigate();
 const editReviewHandler = (event) => {
     event.preventDefault();  
     
-    // const comment = {
-    //     comment: review,
-    //     id,
-    //     bookId: Number(book)
-    // }
-    // axios.put(`${API_URL}/reviews/${id}`, comment) 
-    // .then(res => navigator(`/reviewsPage`))
-    // .catch(err => toast.error(err.message))
-
     axios.put(`${API_URL}/reviews/${id}`, {
         comment: review,
         id,
@@ -54,8 +45,6 @@ const editReviewHandler = (event) => {
     })
      .then(res => navigator(`/reviewsPage`))
     .catch(err => toast.error(err.message))
-    
-
 }
 
   return (
@@ -72,7 +61,7 @@ const editReviewHandler = (event) => {
         {books.map(book => <option value={book.id} key={book.id}>{book.title}</option>)}
   </select>
 
-  <button type="submit">Edit Review</button>
+  <button className='link-edit' type="submit">Edit Review</button>
 </div>
 
     </form>

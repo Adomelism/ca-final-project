@@ -67,7 +67,7 @@ const EditAuthor = () => {
         <input type="url" value={image} name="image" id="image" onChange={imageHandler}></input>
       </div>
 
-        <button type="submit">Edit Genre</button>
+        <button className='link-edit' type="submit">Edit Genre</button>
 
      </form>
 

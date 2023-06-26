@@ -29,14 +29,14 @@ const ReviewsPage = () => {
 
   return (
     <Container>
-    <Link to='/reviews/create'>Add a new review</Link>
+    <Link to='/reviews/create' className='link-add'>Add a new review</Link>
 
     <ul>
       {reviews.map(review => (
         <li key={review.id}>
           <Link to={`/reviews/${review.id}`}>{review.comment}</Link>
-          <button onClick={() => deleteReviewHandler(review.id)}>Delete</button>
-          <Link to={`/reviews/edit/${review.id}`}>Edit Review</Link>
+          <button className='button' onClick={() => deleteReviewHandler(review.id)}>Delete</button>
+          <Link to={`/reviews/edit/${review.id}`} className='link-edit'>Edit Review</Link>
         </li>
     ))}
     </ul>

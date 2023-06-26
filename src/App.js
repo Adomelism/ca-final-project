@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Routes, Route, Link, NavLink } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import AuthorsPage from './Pages/AuthorsPage/AuthorsPage';
@@ -18,6 +18,7 @@ import ReviewsPage from './Pages/ReviewsPage/ReviewsPage';
 import ReviewPage from './Pages/ReviewPage/ReviewPage';
 import CreateReview from './Pages/CreateReview/CreateReview';
 import EditReview from './Pages/EditReview/EditReview';
+
 
 function App() {
   return (

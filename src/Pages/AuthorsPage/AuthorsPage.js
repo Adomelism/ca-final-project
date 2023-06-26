@@ -7,6 +7,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
+
 const AuthorsPage = () => {
 
   const { id } = useParams()
@@ -34,14 +36,14 @@ const deleteAuthorHandler = (id) => {
 
   return (
     <Container>
-      <Link to='/authors/create'>Add a New Author</Link>
+      <Link to='/authors/create' className='link-add'>Add a New Author</Link>
         <h1>Authors:</h1>
         <ul>
             {authors.map(author => (
                 <li key={author.id}>
                 <Link to ={`/authors/${author.id}`}>{author.name}</Link> 
-                <button onClick={() => deleteAuthorHandler(author.id)}>Delete</button>
-                <Link to={`/authors/edit/${author.id}`}>Edit Author</Link>
+                <button className="button" onClick={() => deleteAuthorHandler(author.id)}>Delete</button>
+                <Link to={`/authors/edit/${author.id}`} className='link-edit'>Edit Author</Link>
                 </li>))} 
         </ul>
     </Container>

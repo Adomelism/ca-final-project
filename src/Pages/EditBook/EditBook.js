@@ -36,13 +36,6 @@ const EditBook = () => {
     }, [])
 
     useEffect(() => {
-      axios.get(`${API_URL}/authors/${id}`)
-      .then(res => {
-        setAuthorId(res.data.id)
-      })
-    }, [id])
-
-    useEffect(() => {
       axios.get(`${API_URL}/categories`)
       .then(res => {
         console.log(res.data)
@@ -52,25 +45,17 @@ const EditBook = () => {
     }, [])
 
     useEffect(() => {
-      axios.get(`${API_URL}/books?_expand=category`)
-      .then(res => {
-        console.log(res.data)
-        setCategoryId(res.data.categoryId)
-      })
-    }, [id])
-  
-    useEffect(() => {
       axios.get(`${API_URL}/books/${id}`)
       .then(res => {
+        console.log(res.data)
         setTitle(res.data.title)
         setUrl(res.data.url)
         setSoldCopies(res.data.soldCopies)
+        setCategoryId(res.data.categoryId)
+        setAuthorId(res.data.authorId)
       })
     }, [id])
 
-  
-    console.log(authorId)
-    console.log(categoryId)
     const navigator = useNavigate();
   
     const editBookHandler = (event) => {

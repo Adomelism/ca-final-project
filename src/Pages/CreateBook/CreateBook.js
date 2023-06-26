@@ -69,41 +69,40 @@ const CreateBook = () => {
   
   return (
     <Container>
-    <form onSubmit={createBookHandler}>
-      <div className='form-control'>
-        <label htmlFor='author'>Author: </label>
-        <select value={author} id='author' name='author' onChange={authorsHandler}>
-          {authors.map(author => <option value={author.id} key={author.id}>{author.name}</option>)}
-        </select>
+      <div className='form-wrapper'>
+        <form onSubmit={createBookHandler}>
+          <div className='inputBox'>
+            <select value={author} id='author' name='author' onChange={authorsHandler}>
+              {authors.map(author => <option value={author.id} key={author.id}>{author.name}</option>)}
+            </select>
+            <span>Author</span>
+          </div>
+
+          <div className="inputBox">
+            <select value={category} id='category' name='category' onChange={categoriesHandler}>
+              {categories.map(category => <option value={category.id} key={category.id}>{category.genre}</option>)}
+            </select>
+            <span>Genre</span>
+          </div>
+
+            <div className='inputBox'>
+              <input value={title} required="required" type="text" name="title" id="title" onChange={titleHandler}></input>
+              <span>Title</span>
+            </div>
+
+            <div className='inputBox'>
+              <input value={url} required="required" type="url" name="url" id="url" onChange={urlHandler}></input>
+              <span>Url</span>
+            </div>
+
+            <div className='inputBox'>
+              <input value={soldCopies} required="required" type="number" name="soldCopies" id="soldCopies" onChange={soldCopiesHandler}></input>
+              <span>Copies Sold</span>
+            </div>
+
+            <button className='link-add-margin' type="submit">Submit Book</button>
+        </form>
       </div>
-
-      <div className="form-control">
-        <label htmlFor="category">Genre: </label>
-        <select value={category} id='category' name='category' onChange={categoriesHandler}>
-          {categories.map(category => <option value={category.id} key={category.id}>{category.genre}</option>)}
-        </select>
-      </div>
-
-        <div className='form-control'>
-          <label htmlFor='title'>Book Title: </label>
-          <input value={title} type="text" name="title" id="title" onChange={titleHandler}></input>
-        </div>
-
-        <div className='form-control'>
-          <label htmlFor='url'>Book cover url: </label>
-          <input value={url} type="url" name="url" id="url" onChange={urlHandler}></input>
-        </div>
-
-        <div className='form-control'>
-          <label htmlFor='soldCopies'>Number of sold book copies: </label>
-          <input value={soldCopies} type="number" name="soldCopies" id="soldCopies" onChange={soldCopiesHandler}></input>
-        </div>
-
-  <button type="submit">Submit Book</button>
-
-
-    </form>
-
   </Container>
   )
 }

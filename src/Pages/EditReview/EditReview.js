@@ -49,23 +49,23 @@ const editReviewHandler = (event) => {
 
   return (
     <Container>
-    <form onSubmit={editReviewHandler}>
-      <div className='form-control'>
-        <label htmlFor='comment'>Your review: </label>
-        <textarea value={review} name="comment" id="comment" onChange={reviewHandler}></textarea>
+      <div className='form-wrapper'>
+        <form onSubmit={editReviewHandler}>
+          <div className='inputBox'>
+            <textarea value={review} required="required" name="comment" id="comment" onChange={reviewHandler}></textarea>
+            <span>Your Review </span>
+          </div>
+
+          <div className="inputBoxReviews">
+            <select value={book} id='book' name='book' onChange={bookHandler}>
+            {books.map(book => <option value={book.id} key={book.id}>{book.title}</option>)}
+            </select>
+            <span>Book</span>
+
+          <button className='link-edit-margin' type="submit">Edit Review</button>
+          </div>
+        </form>
       </div>
-
-      <div className="form-control">
-        <label htmlFor="book">Book: </label>
-        <select value={book} id='book' name='book' onChange={bookHandler}>
-        {books.map(book => <option value={book.id} key={book.id}>{book.title}</option>)}
-  </select>
-
-  <button className='link-edit' type="submit">Edit Review</button>
-</div>
-
-    </form>
-
   </Container>
   )
 }

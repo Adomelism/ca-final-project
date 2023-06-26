@@ -76,39 +76,40 @@ const EditBook = () => {
 
   return (
     <Container>
-    <form onSubmit={editBookHandler}>
-      <div className='form-control'>
-        <label htmlFor='authorId'>Edit Author: </label>
-        <select value={authorId} id='authorId' name='authorId' onChange={authorIdHandler}>
-          {authors.map(author => <option value={author.id} key={author.id}>{author.name}</option>)}
-        </select>
+      <div className='form-wrapper'>
+        <form onSubmit={editBookHandler}>
+          <div className='inputBox'>
+            <select value={authorId} id='authorId' name='authorId' onChange={authorIdHandler}>
+              {authors.map(author => <option value={author.id} key={author.id}>{author.name}</option>)}
+            </select>
+            <span>Edit Author</span>
+          </div>
+
+          <div className="inputBox">
+            <select value={categoryId} id='category' name='category' onChange={categoryIdHandler}>
+              {categories.map(category => <option value={category.id} key={category.id}>{category.genre}</option>)}
+            </select>
+              <span>Edit book Genre</span>
+          </div>
+
+            <div className='inputBox'>
+              <input value={title} type="text" name="title" id="title" onChange={titleHandler}></input>
+              <span>Edit Book Title</span>
+            </div>
+
+            <div className='inputBox'>
+              <input value={url} type="url" name="url" id="url" onChange={urlHandler}></input>
+              <span>Edit Book Cover Url</span>
+            </div>
+
+            <div className='inputBox'>
+              <input value={soldCopies} type="number" name="soldCopies" id="soldCopies" onChange={soldCopiesHandler}></input>
+              <span>Edit Number of Copies Sold</span>
+            </div>
+
+            <button className='link-edit-margin' type="submit">Edit Book</button>
+        </form>
       </div>
-
-      <div className="form-control">
-        <label htmlFor="category">Edit Genre: </label>
-        <select value={categoryId} id='category' name='category' onChange={categoryIdHandler}>
-          {categories.map(category => <option value={category.id} key={category.id}>{category.genre}</option>)}
-        </select>
-      </div>
-
-        <div className='form-control'>
-          <label htmlFor='title'>Edit Book Title: </label>
-          <input value={title} type="text" name="title" id="title" onChange={titleHandler}></input>
-        </div>
-
-        <div className='form-control'>
-          <label htmlFor='url'>Edit Book cover url: </label>
-          <input value={url} type="url" name="url" id="url" onChange={urlHandler}></input>
-        </div>
-
-        <div className='form-control'>
-          <label htmlFor='soldCopies'>Edit Number of sold book copies: </label>
-          <input value={soldCopies} type="number" name="soldCopies" id="soldCopies" onChange={soldCopiesHandler}></input>
-        </div>
-
-        <button className='link-edit' type="submit">Edit Book</button>
-    </form>
-
   </Container>
   )
 }

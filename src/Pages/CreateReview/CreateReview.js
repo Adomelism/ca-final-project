@@ -27,8 +27,6 @@ const navigator = useNavigate();
 
 const createReviewHandler = (event) => {
   event.preventDefault();
-  console.log(review)
-  console.log(book)
   const newReview = {
     comment: review,
     bookId: Number(book),
@@ -40,26 +38,25 @@ const createReviewHandler = (event) => {
   })
   .catch(err => toast.error(err.message))
 }
-
   return (
     <Container>
-      <form onSubmit={createReviewHandler}>
-        <div className='form-control'>
-          <label htmlFor='comment'>Your review: </label>
-          <textarea name="comment" id="comment" onChange={reviewHandler}></textarea>
-        </div>
+      <div className='form-wrapper'>
+        <form onSubmit={createReviewHandler}>
+          <div className='inputBox'>
+            <textarea required="required" name="comment" id="comment" onChange={reviewHandler}></textarea>
+            <span>Your Review</span>
+          </div>
 
-        <div className="form-control">
-          <label htmlFor="book">Book: </label>
-          <select value={book} id='book' name='book' onChange={bookHandler}>
-          {books.map(book => <option value={book.id} key={book.id}>{book.title}</option>)}
-    </select>
+          <div className="inputBoxReviews">
+            <select value={book} id='book' name='book' onChange={bookHandler}>
+            {books.map(book => <option value={book.id} key={book.id}>{book.title}</option>)}
+            </select>
+            <span>Book</span>
 
-    <button type="submit">Submit Review</button>
-</div>
-
-      </form>
-
+            <button className='link-add-margin' type="submit">Submit Review</button>
+          </div>
+        </form>
+      </div>
     </Container>
   )
 }

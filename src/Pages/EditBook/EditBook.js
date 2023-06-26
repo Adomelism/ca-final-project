@@ -9,7 +9,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 const EditBook = () => {
 
     const { id } = useParams()
-    // const { bId, cId } = useParams()
 
     const [authors, setAuthors] = useState([])
     const [categories, setCategories] = useState([])
@@ -35,13 +34,6 @@ const EditBook = () => {
         setAuthors(res.data)
       })
     }, [])
-    
-    useEffect(() => {
-      axios.get(`${API_URL}/authors/${id}`)
-      .then(res => {
-        setAuthorId(res.data.id)
-      })
-    }, [id])
 
     useEffect(() => {
       axios.get(`${API_URL}/categories`)
@@ -53,23 +45,17 @@ const EditBook = () => {
     }, [])
 
     useEffect(() => {
-      axios.get(`${API_URL}/categories/${id}`)
-      .then(res => {
-        console.log(res.data)
-        setCategoryId(res.data.id)
-      })
-    }, [id])
-  
-    useEffect(() => {
       axios.get(`${API_URL}/books/${id}`)
       .then(res => {
+        console.log(res.data)
         setTitle(res.data.title)
         setUrl(res.data.url)
         setSoldCopies(res.data.soldCopies)
+        setCategoryId(res.data.categoryId)
+        setAuthorId(res.data.authorId)
       })
     }, [id])
 
-  
     const navigator = useNavigate();
   
     const editBookHandler = (event) => {
@@ -77,7 +63,7 @@ const EditBook = () => {
     
         axios.put(`${API_URL}/books/${id}`, {
           authorId: Number(authorId),
-          categoryId: Number(authorId),
+          categoryId: Number(categoryId),
           id,
           title,
           url,

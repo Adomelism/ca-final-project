@@ -278,6 +278,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
 
@@ -383,6 +384,10 @@ padding: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-slide {
+  min-height: 200px;
 }
 
 .card-container {

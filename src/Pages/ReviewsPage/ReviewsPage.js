@@ -7,7 +7,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
-
+import { Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
 const ReviewsPage = () => {
     
     const [reviews, setReviews] = useState([])
@@ -28,28 +29,30 @@ const ReviewsPage = () => {
         .catch(err => toast.error(err.message))
     }
 
-    // .reviews-list {
-    //   list-style-type: none;
-    //   padding: 15px;
-    //   display: flex;
-    //   flex-wrap: wrap;
-    //   gap: 10px;
-    // }
 
   return (
     <Container>
     <Link to='/reviews/create' className='link-add'>Add a new review</Link>
+    <div className='swiper-section'>
+    <Swiper
+      spaceBetween={50}
+      slidesPerView={3}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+            <ul>
+              {reviews.map(review => (
+                <SwiperSlide key={review.id}><li className='reviews-list' >
+                  <button className='button' onClick={() => deleteReviewHandler(review.id)}>Delete</button>
+                  <Link to={`/reviews/edit/${review.id}`} className='link-edit'>Edit Review</Link>
+                  <Link to={`/reviews/${review.id}`}>
+                  {review.comment} <FontAwesomeIcon icon={faComments} bounce/></Link>
+                </li></SwiperSlide>
+            ))}
+            </ul>
 
-    <ul>
-      {reviews.map(review => (
-        <li className='reviews-list' key={review.id}>
-          <button className='button' onClick={() => deleteReviewHandler(review.id)}>Delete</button>
-          <Link to={`/reviews/edit/${review.id}`} className='link-edit'>Edit Review</Link>
-          <Link to={`/reviews/${review.id}`}>
-          {review.comment} <FontAwesomeIcon icon={faComments} bounce/></Link>
-        </li>
-    ))}
-    </ul>
+    </Swiper>
+    </div>
   </Container>
   )
 }

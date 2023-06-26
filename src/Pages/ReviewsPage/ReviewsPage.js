@@ -35,7 +35,7 @@ const ReviewsPage = () => {
     <Link to='/reviews/create' className='link-add'>Add a new review</Link>
     <div className='swiper-section'>
     <Swiper
-      spaceBetween={50}
+      spaceBetween={30}
       slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
@@ -45,7 +45,7 @@ const ReviewsPage = () => {
                 <SwiperSlide key={review.id}><li className='reviews-list' >
                   <button className='button' onClick={() => deleteReviewHandler(review.id)}>Delete</button>
                   <Link to={`/reviews/edit/${review.id}`} className='link-edit'>Edit Review</Link>
-                  <Link to={`/books/${review.bookId}`}>
+                  <Link to={`/books/${review.bookId}`} className='reviews-link'>
                   {review.comment} <FontAwesomeIcon icon={faComments} bounce/></Link>
                 </li></SwiperSlide>
             ))}

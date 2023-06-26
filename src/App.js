@@ -79,8 +79,10 @@ function App() {
 
             <Route path='/' element={ 
               <div className='content'>
-                <h1>HomePage</h1>
-                <p>This is Home Page under construction...</p>
+                <div className='animatedContainer'>
+                  <span className='text1'>Welcome to</span>
+                  <span className='text2'>e-book-library</span>
+                </div>
               </div>
               } />
             <Route path='*' element={

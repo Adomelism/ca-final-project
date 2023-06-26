@@ -27,17 +27,16 @@ const deleteCategoryHandler = (id) => {
         .catch(err => toast.error(err.message))
 }
 
-
   return (
     <Container>
-      <Link to='/categories/create'>Add a new book Genre!</Link>
+      <Link to='/categories/create' className='link-add'>Add a new book Genre!</Link>
 
       <ul>Genres: 
         {categories.map(category => (
           <li key={category.id}>
             <Link to={`/categories/${category.id}`}>{category.genre}</Link>
-            <button onClick={() => deleteCategoryHandler(category.id)}>Delete</button>
-          <Link to={`/categories/edit/${category.id}`}>Edit Category</Link>
+            <button className='button' onClick={() => deleteCategoryHandler(category.id)}>Delete</button>
+          <Link to={`/categories/edit/${category.id}`} className='link-edit'>Edit Category</Link>
           </li>
       ))}
       </ul>

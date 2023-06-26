@@ -54,10 +54,8 @@ const EditCategory = () => {
                 <label htmlFor='category'>Edit selected book Genre: </label>
                 <input type="text" value={category} name="category" id="category" onChange={categoryHandler}></input>
             </div>
-            <button type="submit">Edit Genre</button>
-
+            <button className='link-edit' type="submit">Edit Genre</button>
          </form>
-
   </Container>
   )
 }

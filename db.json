@@ -107,9 +107,9 @@
   ],
   "reviews": [
     {
-      "bookId": 2,
+      "comment": "Journey through Middle-earth is one of the most unforgettable adventures that has ever taken place in a book.",
       "id": 2,
-      "comment": "Journey through Middle-earth is one of the most unforgettable adventures that has ever taken place in a book.s"
+      "bookId": 2
     },
     {
       "bookId": 3,

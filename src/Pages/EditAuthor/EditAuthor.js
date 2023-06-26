@@ -25,7 +25,6 @@ const EditAuthor = () => {
     useEffect(() => {
         axios.get(`${API_URL}/authors/${id}`)
         .then(res => {
-            // console.log(res.data)
             setName(res.data.name)
             setAbout(res.data.about)
             setImage(res.data.image)
@@ -51,25 +50,27 @@ const EditAuthor = () => {
 }
   return (
     <Container>
-    <form onSubmit={editAuthorHandler}>
-    <div className='form-control'>
-        <label htmlFor='name'>Author name: </label>
-        <input value={name} type="text" name="name" id="name" onChange={nameHandler}></input>
+      <div className='form-wrapper'>
+        <form onSubmit={editAuthorHandler}>
+        <div className='inputBox'>
+            <input value={name} required="required" type="text" name="name" id="name" onChange={nameHandler}></input>
+            <span>Author Name </span>
+          </div>
+
+          <div className='inputBox'>
+            <textarea value={about} required="required" name="about" id="about" onChange={aboutHandler}></textarea>
+            <span>About Author </span>
+          </div>
+
+          <div className='inputBox'>
+            <input type="url" required="required" value={image} name="image" id="image" onChange={imageHandler}></input>
+            <span>Author Image Link </span>
+          </div>
+
+            <button className='link-edit-margin' type="submit">Edit Author</button>
+
+        </form>
       </div>
-
-      <div className='form-control'>
-        <label htmlFor='about'>About author: </label>
-        <textarea value={about} name="about" id="about" onChange={aboutHandler}></textarea>
-      </div>
-
-      <div className='form-control'>
-        <label htmlFor='image'>Author Image: </label>
-        <input type="url" value={image} name="image" id="image" onChange={imageHandler}></input>
-      </div>
-
-        <button type="submit">Edit Genre</button>
-
-     </form>
 
 </Container>
   )

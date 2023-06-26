@@ -38,7 +38,6 @@ const EditBook = () => {
     useEffect(() => {
       axios.get(`${API_URL}/categories`)
       .then(res => {
-        console.log(res.data)
         setCategories(res.data)
         
       })
@@ -47,7 +46,6 @@ const EditBook = () => {
     useEffect(() => {
       axios.get(`${API_URL}/books/${id}`)
       .then(res => {
-        console.log(res.data)
         setTitle(res.data.title)
         setUrl(res.data.url)
         setSoldCopies(res.data.soldCopies)
@@ -108,9 +106,7 @@ const EditBook = () => {
           <input value={soldCopies} type="number" name="soldCopies" id="soldCopies" onChange={soldCopiesHandler}></input>
         </div>
 
-  <button type="submit">Edit Book</button>
-
-
+        <button className='link-edit' type="submit">Edit Book</button>
     </form>
 
   </Container>

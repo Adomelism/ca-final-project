@@ -29,14 +29,14 @@ const deleteBookHandler = (id) => {
 
   return (
     <Container>
-        <Link to='/books/create'>Add a new book</Link>
+        <Link to='/books/create' className='link-add'>Add a new book</Link>
 
         <ul>
           {books.map(book => (
             <li key={book.id}>
               <Link to={`/books/${book.id}`}>{book.title} by {book.author.name}</Link>
-              <button onClick={() => deleteBookHandler(book.id)}>Delete</button>
-              <Link to={`/books/edit/${book.id}`}>Edit a book</Link>
+              <button className='button' onClick={() => deleteBookHandler(book.id)}>Delete</button>
+              <Link to={`/books/edit/${book.id}`} className='link-edit'>Edit a book</Link>
             </li>
           ))}
         </ul>

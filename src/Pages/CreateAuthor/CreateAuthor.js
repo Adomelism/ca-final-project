@@ -35,27 +35,28 @@ const CreateAuthor = () => {
   }
   return (
     <Container>
-    <form onSubmit={createAuthorHandler}>
-      <div className='form-control'>
-        <label htmlFor='name'>Author name: </label>
-        <input value={name} type="text" name="name" id="name" onChange={nameHandler}></input>
+      <div className='form-wrapper'>
+        <form onSubmit={createAuthorHandler}>
+          <div className='inputBox'>
+            <input value={name} type="text" required="required" name="name" id="name" onChange={nameHandler}></input>
+            <span>Author Name </span>
+          </div>
+
+          <div className='inputBox'>
+            <textarea value={about} required="required" name="about" id="about" onChange={aboutHandler}></textarea>
+            <span>About Author </span>
+          </div>
+
+          <div className='inputBox'>
+            <input type="url" value={image} required="required" name="image" id="image" onChange={imageHandler}></input>
+            <span>Author Image Link </span>
+          </div>
+          
+          <button className='link-add-margin' type="submit">Add Author</button>
+        </form>
       </div>
 
-      <div className='form-control'>
-        <label htmlFor='about'>About author: </label>
-        <textarea value={about} name="about" id="about" onChange={aboutHandler}></textarea>
-      </div>
 
-      <div className='form-control'>
-        <label htmlFor='image'>Author Image: </label>
-        <input type="url" value={image} name="image" id="image" onChange={imageHandler}></input>
-      </div>
-
-
-  <button type="submit">Add Author</button>
-
-
-    </form>
 
   </Container>
   )

@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Routes, Route, Link, NavLink } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import AuthorsPage from './Pages/AuthorsPage/AuthorsPage';
@@ -18,6 +18,7 @@ import ReviewsPage from './Pages/ReviewsPage/ReviewsPage';
 import ReviewPage from './Pages/ReviewPage/ReviewPage';
 import CreateReview from './Pages/CreateReview/CreateReview';
 import EditReview from './Pages/EditReview/EditReview';
+
 
 function App() {
   return (
@@ -79,8 +80,10 @@ function App() {
 
             <Route path='/' element={ 
               <div className='content'>
-                <h1>HomePage</h1>
-                <p>This is Home Page under construction...</p>
+                <div className='animatedContainer'>
+                  <span className='text1'>Welcome to</span>
+                  <span className='text2'>e-book-library</span>
+                </div>
               </div>
               } />
             <Route path='*' element={

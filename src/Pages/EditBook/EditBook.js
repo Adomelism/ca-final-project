@@ -9,7 +9,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 const EditBook = () => {
 
     const { id } = useParams()
-    // const { bId, cId } = useParams()
 
     const [authors, setAuthors] = useState([])
     const [categories, setCategories] = useState([])
@@ -35,7 +34,7 @@ const EditBook = () => {
         setAuthors(res.data)
       })
     }, [])
-    
+
     useEffect(() => {
       axios.get(`${API_URL}/authors/${id}`)
       .then(res => {
@@ -53,10 +52,10 @@ const EditBook = () => {
     }, [])
 
     useEffect(() => {
-      axios.get(`${API_URL}/categories/${id}`)
+      axios.get(`${API_URL}/books?_expand=category`)
       .then(res => {
         console.log(res.data)
-        setCategoryId(res.data.id)
+        setCategoryId(res.data.categoryId)
       })
     }, [id])
   
@@ -70,6 +69,8 @@ const EditBook = () => {
     }, [id])
 
   
+    console.log(authorId)
+    console.log(categoryId)
     const navigator = useNavigate();
   
     const editBookHandler = (event) => {
@@ -77,7 +78,7 @@ const EditBook = () => {
     
         axios.put(`${API_URL}/books/${id}`, {
           authorId: Number(authorId),
-          categoryId: Number(authorId),
+          categoryId: Number(categoryId),
           id,
           title,
           url,

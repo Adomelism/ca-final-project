@@ -2,6 +2,7 @@ import Container from '../Components/Container/Container';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { API_URL } from '../../config';
+import Card from '../Components/Card/Card';
 
 const BookPage = () => {
 
@@ -24,14 +25,17 @@ const BookPage = () => {
     return '';
   }
 
+  const infoElement = `${book.soldCopies} sold copies of the book.`
+
   return (
     <Container>
-      <div>
-        <h1>Title: {book.title}</h1>
-        <h2> Author: {book.author.name}</h2>
-        <h3> Copies Sold: {book.soldCopies}</h3>
-        <img src={book.url} alt={book.title}></img>
-      </div>
+      <Card 
+      title={book.title}
+      author={book.author.name}
+      imageUrl={book.url}
+      info={infoElement}
+      />
+    
     </Container>
   )
 }

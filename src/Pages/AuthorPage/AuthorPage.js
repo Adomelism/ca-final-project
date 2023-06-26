@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { API_URL } from '../../config';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import Card from '../Components/Card/Card';
 
 const AuthorPage = () => {
 
@@ -23,19 +24,16 @@ const AuthorPage = () => {
     return '';
   }
 
-
-  const authorInfo = 
-      <div>
-        <h1>{author.name}</h1>
-        <img src={author.image} alt={author.name}></img>
-        <p>{author.about}</p>
-        <span>If you are fascinated by this author, check list of available <Link to={`/books/${author.id}`}>books!</Link></span>
-      </div>
-
-
   return (
     <Container>
-      {authorInfo}
+
+      <Card 
+      title={author.name}
+      author=''
+      imageUrl={author.image}
+      info={author.about}
+      />
+
     </Container>
   )
 }

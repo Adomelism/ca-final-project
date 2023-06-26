@@ -45,7 +45,7 @@ const ReviewsPage = () => {
                 <SwiperSlide key={review.id}><li className='reviews-list' >
                   <button className='button' onClick={() => deleteReviewHandler(review.id)}>Delete</button>
                   <Link to={`/reviews/edit/${review.id}`} className='link-edit'>Edit Review</Link>
-                  <Link to={`/reviews/${review.id}`}>
+                  <Link to={`/books/${review.bookId}`}>
                   {review.comment} <FontAwesomeIcon icon={faComments} bounce/></Link>
                 </li></SwiperSlide>
             ))}

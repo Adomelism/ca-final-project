@@ -49,13 +49,15 @@ const EditCategory = () => {
 
   return (
     <Container>
-        <form onSubmit={editCategoryHandler}>
-            <div className='form-control'>
-                <label htmlFor='category'>Edit selected book Genre: </label>
-                <input type="text" value={category} name="category" id="category" onChange={categoryHandler}></input>
-            </div>
-            <button className='link-edit' type="submit">Edit Genre</button>
-         </form>
+         <div className='form-wrapper'>
+            <form onSubmit={editCategoryHandler}>
+                <div className='inputBox'>
+                    <input type="text" value={category} name="category" id="category" onChange={categoryHandler}></input>
+                    <span>Edit Book Genre </span>
+                </div>
+                <button className='link-edit-margin' type="submit">Edit Genre</button>
+            </form>
+        </div>
   </Container>
   )
 }

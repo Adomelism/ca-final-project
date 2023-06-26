@@ -41,17 +41,17 @@ const CreateCategory = () => {
 
   return (
     <Container>
-      <form onSubmit={createCategoryHandler}>
-        <div className='form-control'>
-          <label htmlFor='category'>Add a book Genre: </label>
-          <input type="text" name="category" id="category" onChange={categoryHandler}></input>
-        </div>
-
-
-    <button type="submit">Submit Genre</button>
-
-
+      <div className='form-wrapper'>
+        <form onSubmit={createCategoryHandler}>
+          <div className='inputBox'>
+            <input type="text" required="required" name="category" id="category" onChange={categoryHandler}></input>
+            <span>Add Book Genre </span>
+          </div>
+          <button className='link-add-margin' type="submit">Submit Genre</button>
       </form>
+      </div>
+
+
 
     </Container>
   )

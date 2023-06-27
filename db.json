@@ -29,12 +29,6 @@
       "name": "Paulo Coelho",
       "about": "Paulo Coelho de Souza (Portuguese, born 24 August 1947) is a Brazilian lyricist and novelist and a member of the Brazilian Academy of Letters since 2002. His novel The Alchemist became an international best-seller and he has published 30 more books since then.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Paulo_Coelho_2007-04-09_001_%28cropped%29.jpg/220px-Paulo_Coelho_2007-04-09_001_%28cropped%29.jpg"
-    },
-    {
-      "name": "test",
-      "about": "test",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/220px-J._K._Rowling_2010.jpg",
-      "id": 6
     }
   ],
   "books": [

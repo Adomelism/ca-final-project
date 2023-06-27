@@ -8,9 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const AuthorsPage = () => {
 
-  const { id } = useParams()
-
-  const [authors, setAuthors] = useState([])
+const [authors, setAuthors] = useState([])
 
 useEffect(() => {
   axios.get(`${API_URL}/authors`)
@@ -24,12 +22,13 @@ const deleteAuthorHandler = (id) => {
       const removeAuthorIndex = authors.findIndex(author => author.id === id);
       setAuthors(prevState => prevState.toSpliced(removeAuthorIndex, 1))
       toast.success('Author was deleted.')
-      
     })
     .catch(err => toast.error(err.message))
 }
 
-
+if (!authors) {
+  return '';
+}
 
   return (
     <Container>

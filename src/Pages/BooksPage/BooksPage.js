@@ -29,6 +29,9 @@ const deleteBookHandler = (id) => {
         .catch(err => toast.error(err.message))
 }
 
+if (!books) {
+  return '';
+}
 
   return (
     <Container>

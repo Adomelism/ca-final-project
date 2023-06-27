@@ -29,6 +29,10 @@ const ReviewsPage = () => {
         .catch(err => toast.error(err.message))
     }
 
+    if (!reviews) {
+      return '';
+    }
+
 
   return (
     <Container>

@@ -27,6 +27,10 @@ const deleteCategoryHandler = (id) => {
         .catch(err => toast.error(err.message))
 }
 
+if (!categories) {
+  return '';
+}
+
   return (
     <Container>
       <Link to='/categories/create' className='link-add'>Add a new book Genre!</Link>

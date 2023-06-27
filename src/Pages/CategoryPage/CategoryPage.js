@@ -19,6 +19,15 @@ const CategoryPage = () => {
     })
   }, [id])
 
+  console.log(category)
+
+  if (!category) {
+    return '';
+  }
+
+  if (category.books.length < 1) {
+    return <h1 className='item-not-found'>There are no books currently in this category.</h1>
+  }
 
   return (
     <Container>

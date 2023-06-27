@@ -96,7 +96,7 @@ const CreateBook = () => {
             </div>
 
             <div className='inputBox'>
-              <input value={soldCopies} required="required" type="number" name="soldCopies" id="soldCopies" onChange={soldCopiesHandler}></input>
+              <input value={soldCopies} required="required" type="number" min="1" name="soldCopies" id="soldCopies" onChange={soldCopiesHandler}></input>
               <span>Copies Sold</span>
             </div>
 

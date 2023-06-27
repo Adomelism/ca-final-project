@@ -19,8 +19,6 @@ const CategoryPage = () => {
     })
   }, [id])
 
-  console.log(category)
-
   if (!category) {
     return '';
   }
